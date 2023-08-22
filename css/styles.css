@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Chewy&family=Poppins:ital,wght@0,500;0,700;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chewy&family=Poppins:ital,wght@0,500;0,700;1,700&family=Varela+Round&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --bg-color: #ffe8c2;
+  --pink: #fa5a8f;
+  --pink-light: #ff8cb2;
+  --grey: #0f0f0f;
+  --white: #ededed;
+}
+
+body {
+  text-align: center;
+  background-color: var(--bg-color);
+  height: 100vh;
+  width: 100vw;
+  font-family: "Varela Round", sans-serif;
+  overflow: hidden;
+}
+
+#container {
+  background-color: rgba(64, 68, 71, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+#restart-btn {
+  font-size: 1.3rem;
+  padding: 15px;
+  right: 90;
+  left: 50;
+  border-radius: 25px;
+  border: none;
+  background-color: var(--pink);
+  color: var(--white);
+  cursor: pointer;
+  transition: all 2s ease-in-out 0;
+}
+
+#restart-btn:hover {
+  background-color: var(--white);
+  color: var(--pink);
+  transform: scale(1.05);
+}
+
+#win-text {
+  color: var(--white);
+  margin-bottom: 20px;
+  font-size: 1.9rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+}
+
+#title {
+  margin-top: 100px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--grey);
+  font-size: 2.8rem;
+  font-family: "Chewy", cursive;
+}
+#winner-goal {
+  padding-bottom: 30px;
+  font-size: 1.2rem;
+}
+
+#score-board {
+  font-size: 1.1rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-bottom: 40px;
+  gap: 10px;
+  color: var(--white);
+  background-color: var(--pink);
+  min-width: 25%;
+  border-radius: 20px;
+}
+
+#player {
+  background-color: var(--grey);
+  padding: 12px;
+  border-radius: 20px;
+  margin-right: 20px;
+}
+
+#pc {
+  background-color: var(--grey);
+  padding: 12px;
+  border-radius: 20px;
+}
+
+#instructions {
+  margin-bottom: 40px;
+  color: var(--grey);
+  font-size: 1.4rem;
+}
+
+#moves {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.move {
+  background-color: var(--pink);
+  width: 80px;
+  height: 80px;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 3px solid #000;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.move:hover {
+  transform: scale(1.1);
+  background-color: var(--pink-light);
+}
+
+.hidden {
+  display: none;
+}
+
+#result {
+  color: var(--grey);
+  padding: 10px;
+  font-size: 2rem;
+  font-family: "Chewy", cursive;
+  display: block;
+}
+
+#move-player,
+#move-pc {
+  border-bottom: 1px solid var(--grey);
+}
+
+#description {
+  padding: 10px;
+  font-size: 1.1rem;
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 1024px) {
+  #score-board {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #score-board {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #score-board {
+    width: 80%;
+  }
+
+  #winner-goal {
+    font-size: 1.1rem;
+  }
+
+  #description {
+    font-size: 1rem;
+  }
+}
